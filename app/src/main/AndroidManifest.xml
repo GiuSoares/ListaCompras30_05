@@ -20,7 +20,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity_main" />
-        <activity android:name=".layout_lista_produtos"></activity>
     </application>
 
 </manifest>

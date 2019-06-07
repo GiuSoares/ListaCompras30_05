@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.newprojetolistadecompras.JavaClasses.Produto;
+import com.example.projetolistas.JavaClasses.Produto;
 
 import java.util.List;
 
@@ -48,7 +48,7 @@ public class AdapterProduto extends BaseAdapter {
 
         if( convertView == null ){
             convertView = inflater.inflate
-                    (R.layout.layout_lista_produtos, null);
+                    (R.layout.activity_layout_lista_produtos, null);
             item = new Suporte();
             item.tvCodigo = (TextView)
                     convertView.findViewById(R.id.tvListaCodigo);

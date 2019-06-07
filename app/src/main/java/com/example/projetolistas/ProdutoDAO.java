@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.projetolistas.BancodeDados.Banco;
+import com.example.projetolistas.JavaClasses.Produto;
 
 import java.util.ArrayList;
 import java.util.List;

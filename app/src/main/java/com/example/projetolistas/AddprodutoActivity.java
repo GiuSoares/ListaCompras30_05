@@ -9,9 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.newprojetolistadecompras.JavaClasses.Produto;
-
-import static com.example.newprojetolistadecompras.R.id.btnSalvarProduto;
+import com.example.projetolistas.JavaClasses.Produto;
 
 
 public class AddprodutoActivity extends AppCompatActivity {

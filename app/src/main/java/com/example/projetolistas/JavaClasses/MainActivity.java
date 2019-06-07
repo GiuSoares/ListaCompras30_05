@@ -1,68 +1,70 @@
 package com.example.projetolistas.JavaClasses;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
 import com.example.projetolistas.AdapterProduto;
+import com.example.projetolistas.AddprodutoActivity;
+import com.example.projetolistas.JavaClasses.Produto;
+import com.example.projetolistas.ProdutoDAO;
+import com.example.projetolistas.R;
 
 import java.util.List;
 
-
 public class MainActivity extends Activity {
 
-        private FloatingActionButton addLista;
+    private FloatingActionButton addLista;
 
-        ListView MinhasListas;
-        List<Produto> Lista;
-        AdapterProduto adapter;
-
-
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+    ListView MinhasListas;
+    List<Produto> Lista;
+    AdapterProduto adapter;
 
 
-            addLista = (FloatingActionButton) findViewById(R.id.addLista);
 
-            MinhasListas = (ListView) findViewById(R.id.minhasListas);
-
-            addLista.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    startActivity(new Intent(MainActivity.this, AddprodutoActivity.class));
-
-                }
-            });
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
 
-        }
+        addLista = (FloatingActionButton) findViewById(R.id.addLista);
 
-        private void carregarLista() {
+        MinhasListas = (ListView)findViewById(R.id.minhasListas);
 
-            Lista = ProdutoDAO.listar(this);
+        addLista.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-            Log.i("cont", "total: " + Lista.size());
+                startActivity(new Intent(MainActivity.this, AddprodutoActivity.class));
 
-//manter        adapter = new ArrayAdapter(this,
-//manter        android.R.layout.simple_list_item_1, lista );
-            adapter = new AdapterProduto(this, Lista);
-            MinhasListas.setAdapter(adapter);
-        }
-
-        @Override
-        protected void onResume() {
-            super.onResume();
-            carregarLista();
-        }
+            }
+        });
 
 
     }
+
+    private void carregarLista(){
+
+        Lista = ProdutoDAO.listar(this);
+
+        Log.i("cont","total: " + Lista.size());
+
+//manter        adapter = new ArrayAdapter(this,
+//manter        android.R.layout.simple_list_item_1, lista );
+        adapter = new AdapterProduto(this, Lista);
+        MinhasListas.setAdapter(adapter);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        carregarLista();
+    }
+
+
+
 }

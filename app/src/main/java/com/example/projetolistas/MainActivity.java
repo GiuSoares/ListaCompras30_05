@@ -1,4 +1,4 @@
-package com.example.projetolistas.JavaClasses;
+package com.example.projetolistas;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
@@ -7,11 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
-import com.example.projetolistas.AdapterProduto;
-import com.example.projetolistas.AddprodutoActivity;
 import com.example.projetolistas.JavaClasses.Produto;
-import com.example.projetolistas.ProdutoDAO;
-import com.example.projetolistas.R;
 
 import java.util.List;
 

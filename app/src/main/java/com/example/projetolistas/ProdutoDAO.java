@@ -5,6 +5,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.projetolistas.BancodeDados.Banco;
+
 import java.util.ArrayList;
 import java.util.List;
 

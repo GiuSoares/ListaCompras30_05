@@ -1,4 +1,4 @@
-package com.example.projetolistas;
+package com.example.projetolistas.BancodeDados;
 
 import android.database.sqlite.SQLiteDatabase;
 

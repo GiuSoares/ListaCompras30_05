@@ -52,9 +52,9 @@ public class ProdutoDAO {
 
                 Produto produto = new Produto();
                 produto.setId(cursor.getInt(0));
-                produto.setNome(cursor.getString(1));
-                produto.setQtde(cursor.getInt(2));
-                produto.setPreco(cursor.getFloat(2));
+                produto.setNome(cursor.getString(4));
+                produto.setQtde(cursor.getInt(1));
+                produto.setPreco(cursor.getFloat(3));
 
                 lista.add(produto);
 

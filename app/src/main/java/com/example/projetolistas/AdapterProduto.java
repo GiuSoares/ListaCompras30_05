@@ -1,6 +1,7 @@
 package com.example.projetolistas;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,9 +64,12 @@ public class AdapterProduto extends BaseAdapter {
         }
 
         Produto produto = lista.get( position );
+       // item.tvCodigo.setText( String.valueOf( 1 ) );
         item.tvCodigo.setText( String.valueOf( produto.getId() ) );
-        item.tvTitulo.setText(  produto.getId()  );
-        item.tvTexto.setText(  produto.getNome()  );
+
+        item.tvTitulo.setText( produto.getNome() );
+        item.tvTexto.setText( String.valueOf(produto.getPreco() ) );
+
 
 
         return convertView;

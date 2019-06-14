@@ -26,6 +26,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Log.i("adalto","oi Zé Luis");
 
         addLista = (FloatingActionButton) findViewById(R.id.addLista);
 
@@ -44,6 +45,8 @@ public class MainActivity extends Activity {
     }
 
     private void carregarLista(){
+
+        Log.i("adalto","oi Zé");
 
         Lista = ProdutoDAO.listar(this);
 
